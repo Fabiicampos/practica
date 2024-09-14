@@ -1,0 +1,331 @@
+html{
+    box-sizing: border-box;
+    font-size: 62,5%;
+}
+
+/* Inicio de los estilos de la página principal */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+/* Encabezado */
+header { /*afectando el posicionamiento y estilos del header*/
+    background-color: #6a0080;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+header h1 {  /*afectando los estilos de las fuentes del header*/
+    font-size: 1.8em;
+    margin: 0;
+}
+
+nav a {  /*estilos de las fuentes de la barra de navegación*/
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.container a:hover{
+    color: #fffb00;
+}
+/* Secciones de productos */
+.products-section {  /*estilos de posicionamiento de contenedor products-section*/
+    padding: 40px 0;
+    background-color: #9600ab;
+    color: #ffda44;
+    text-align: center;
+}
+
+.products-section h2 {  /*afectando los estilos de los h2 de la seccion*/
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.products-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /*gap indica el espacio de 20px entre ellos*/
+}
+
+.product { /*propiedades para el contenedor propio*/
+    background-color: #6F1AB6;
+    border-radius: 10px;
+    padding: 20px;
+    width: calc(33.333% - 40px); /* Unidades flexibles */
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product img { /*afecta a todas las imagenes de contenedor product*/
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 15px;
+}
+
+.product h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.product p {
+    font-size: 1.1em;
+    color: #ffda44;
+}
+
+/* Pie de página */
+footer {
+    background-color: #6a0080;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive design */
+
+/* Pantallas pequeñas - teléfonos */
+@media (max-width: 768px) {
+    .product {
+        width: calc(50% - 20px);
+    }
+
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    .products-section h2 {
+        font-size: 1.5em;
+    }
+}
+
+/* Pantallas extra pequeñas - teléfonos muy pequeños */
+/*agregado para dispositivos aun más pequeños con el fin de aprender a manejar diferentes versiones por cuenta propia*/
+@media (max-width: 480px) {
+    .product {
+        width: calc(50% - 20px);
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    .products-section h2 {
+        font-size: 1.2em;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+}
+/* Agregué esta nueva consulta de medios para que tenga 3 columnas en pantallas más grandes */
+@media (min-width: 992px) {
+    .product {
+        width: calc(25% - 20px);
+    }
+}
+
+
+/*inicio de los estilos de página de nosotros */
+/*comportambiento de estilos de pagina de nosotros independiente*/
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #fff;
+}
+
+.header-nosotros {
+    background-color: #8A2BE2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-nosotros a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.nav a:hover {
+    color: #fffb00;
+}
+
+.sobre-nosotros {
+    background-color: #8A2BE2;
+    padding: 50px;
+    text-align: center;
+}
+
+.sobre-nosotros h2 {
+    font-size: 2.5rem;
+    color: #FFD700;
+    margin-bottom: 30px;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.texto {
+    width: 60%;
+    text-align: left;
+}
+
+.texto p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.imagen {
+    width: 35%;
+}
+
+.imagen img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+footer {
+    background-color: #6A1B9A;
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.btn-boton {
+    background-color: #FFD700;
+    color: #000000;
+    width: 22rem;
+    height: 2rem;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-boton:hover {
+    background-color: #6500d8;
+    color: black;
+}
+
+.texto label {
+    font-size: 1.5rem;
+}
+
+/* Media Queries para Responsividad */
+
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    .header-nosotros {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .sobre-nosotros {
+        padding: 20px;
+    }
+
+    .contenedor {
+        flex-direction: column;
+        text-align: center; /* Centrar contenido en dispositivos pequeños */
+    }
+
+    .texto {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .imagen {
+        width: 100%;
+    }
+
+    .imagen img {
+        max-width: 90%; /* Reducir el tamaño de la imagen en móviles */
+        height: auto; /* Mantener la proporción de la imagen */
+    }
+
+    .btn-boton {
+        width: 100%; /* Botón ocupa el 100% del contenedor en pantallas pequeñas */
+        padding: 15px;
+        font-size: 1rem;
+    }
+
+    .texto label {
+        font-size: 1.2rem;
+    }
+} /*fin de mediaquerry*/
+
+/* Pantallas medianas (tabletas) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .contenedor {
+        flex-direction: column;
+    }
+
+    .texto {
+        width: 100%;
+        text-align: center;
+    }
+
+    .imagen {
+        width: 100%;
+        text-align: center;
+    }
+
+    .imagen img {
+        max-width: 90%;
+        height: auto;
+    }
+
+    .btn-boton {
+        width: 100%; /* Botón ocupa el 100% del contenedor en pantallas medianas */
+        padding: 15px;
+        font-size: 1rem;
+    }
+} /*fin de mediaquerry*/
+
+/* Pantallas grandes para (escritorios) */
+@media (min-width: 1025px) {
+    .contenedor {
+        flex-direction: row;
+    }
+
+    .texto {
+        width: 60%;
+    }
+
+    .imagen {
+        width: 35%;
+    }
+}
